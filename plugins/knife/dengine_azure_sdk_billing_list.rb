@@ -10,10 +10,10 @@ module Engine
     banner "knife dengine azure sdk billing list (options)"
 
       def run
-#        promise = billing_client.operations.list(custom_headers = nil)
+        promise = billing_client.operations.list(custom_headers = nil)
 #        promise = billing_client.billing_periods.list(filter = nil, skiptoken = nil, top = nil, custom_headers = nil)
-        promise = billing_client.invoices.list(expand = nil, filter = nil, skiptoken = nil, top = nil, custom_headers = nil)
-        puts promise
+#        promise = billing_client.invoices.list(expand = nil, filter = nil, skiptoken = nil, top = nil, custom_headers = nil)
+	puts promise[1].name
       end
   end
 end
