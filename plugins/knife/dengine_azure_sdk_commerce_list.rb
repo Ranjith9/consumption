@@ -10,7 +10,7 @@ module Engine
     banner "knife dengine azure sdk commerce list (options)"
 
      def run
-      $filter = "OfferDurableId eq 'MS-AZR-0017P' and Currency eq 'INR' and Locale eq 'en-US' and RegionInfo eq 'IN Central'"
+      $filter = "OfferDurableId eq 'MS-AZR-0017P' and Currency eq 'INR' and Locale eq 'en-US' and RegionInfo eq 'West US'"
       promise = commerce_client.rate_card.get($filter, custom_headers = nil)
       n = promise.meters
       n.each do |a|
